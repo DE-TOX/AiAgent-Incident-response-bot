@@ -7,8 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Built for**: [Kaggle's AI Agents Intensive](https://www.kaggle.com/) - Enterprise Track
-**Deadline**: December 1, 2025
-**Status**: ✅ Complete - 5 AI Agents | Vector Embeddings | Knowledge Base
+5 AI Agents | Vector Embeddings | Knowledge Base
 
 ---
 
@@ -41,9 +40,9 @@ An AI-powered multi-agent system that:
 
 ## 🎥 Demo
 
-### Quick Demo Video
+### Demo Video
 
-> [📹 Watch 2-minute demo](https://youtu.be/your-demo-link) _(Coming soon)_
+> [📹 Watch 2-minute demo](https://youtu.be/your-demo-link) 
 
 ### Try It Yourself
 
@@ -317,9 +316,6 @@ Alert → Triage → Report → Knowledge Search → Postmortem → Actions → 
 
 4. **Configure environment**
 
-   ```bash
-   cp .env.example .env
-   ```
 
    Edit `.env` and add:
 
@@ -342,7 +338,7 @@ You should see a demo incident being processed! 🎉
 
 ## 📖 Usage
 
-### Interactive Demo (Best for Presentations!)
+### Interactive Demo
 
 ```bash
 ./venv/bin/python demo_interactive.py
@@ -503,10 +499,7 @@ incident-response-bot/
 │   └── examples/                  # Sample incidents
 │
 ├── docs/                           # Documentation
-│   ├── HACKATHON-READY.md         # Quick start guide
-│   ├── DAY-4-KNOWLEDGE-RETRIEVAL.md  # Knowledge system docs
-│   ├── EMAIL-AND-INTERACTIVE-DEMO.md # Email setup
-│   └── QUICK-REFERENCE-DAY4.md    # Command cheat sheet
+│   ├── AGENT-ARCHITECTURE.md       # Architecture guide
 │
 ├── demo_interactive.py             # Interactive demo (best!)
 ├── demo_full_lifecycle.py          # Complete workflow demo
@@ -650,120 +643,6 @@ logging:
 python -c "from agents.knowledge_retrieval import KnowledgeRetrievalAgent; from utils.config import load_config; ka = KnowledgeRetrievalAgent(load_config()); print(f'Incidents indexed: {ka.get_incident_count()}')"
 ```
 
-### Test Checklist
-
-- [ ] All demos run without errors
-- [ ] Gemini API key is configured
-- [ ] Email notifications work (optional)
-- [ ] Knowledge base persists across runs
-- [ ] Similarity search returns reasonable scores
-- [ ] Postmortems include context from past incidents
-- [ ] Action items are extracted correctly
-
----
-
-## 📚 Documentation
-
-### Quick Start Guides
-
-- **[HACKATHON-READY.md](docs/HACKATHON-READY.md)** - Everything you need for the demo
-- **[QUICK-REFERENCE-DAY4.md](docs/QUICK-REFERENCE-DAY4.md)** - Command cheat sheet
-
-### Technical Deep Dives
-
-- **[DAY-4-KNOWLEDGE-RETRIEVAL.md](docs/DAY-4-KNOWLEDGE-RETRIEVAL.md)** - Vector search implementation
-- **[EMAIL-AND-INTERACTIVE-DEMO.md](docs/EMAIL-AND-INTERACTIVE-DEMO.md)** - Email setup guide
-
-### Social Media
-
-- **[DAY-4-LINKEDIN-POST.md](docs/DAY-4-LINKEDIN-POST.md)** - LinkedIn post templates
-
----
-
-## 🎤 Demo Script (For Presentations)
-
-### Opening (30 seconds)
-
-> "I built an AI-powered incident response system with 5 specialized agents coordinated by Google Gemini. The coolest part? It learns from every incident it processes. Let me show you..."
-
-### Live Demo (2 minutes)
-
-**Step 1**: Run interactive demo
-
-```bash
-./venv/bin/python demo_interactive.py
-```
-
-**Step 2**: Create first incident
-
-```
-Input: "Database crashed, payment service down"
-→ Show: "No similar incidents found"
-→ Highlight: "This is the first incident - knowledge base is empty"
-```
-
-**Step 3**: Create second incident
-
-```
-Input: "High error rate in payment API"
-→ Show: "Found 1 similar incident (0.85 similarity)"
-→ Highlight: "It found the first incident! That's machine learning in action!"
-```
-
-**Step 4**: Show postmortem
-
-```
-→ Display: 5 Whys root cause analysis
-→ Display: Action items automatically extracted
-→ Display: Jira tickets created
-→ Highlight: "All of this in 10 seconds - would take 2-3 hours manually"
-```
-
-### Closing (30 seconds)
-
-> "This system has already processed 3 incidents and it's learning. After hundreds of incidents, new engineers can instantly learn from past issues. That's the power of AI agents + vector embeddings!"
-
-**Key Stats to Mention:**
-
-- 5 AI agents working together
-- 99% time savings
-- 768-dimensional semantic search
-- Learns continuously from every incident
-
----
-
-## 🚢 Deployment (Optional)
-
-### Local Development
-
-```bash
-# Already set up! Just run:
-./venv/bin/python demo_interactive.py
-```
-
-### Production Deployment
-
-1. **Environment Variables**
-
-   ```bash
-   export GOOGLE_API_KEY=your_key
-   export SENDER_EMAIL=email@gmail.com
-   export SENDER_PASSWORD=app_password
-   ```
-
-2. **Run as Service**
-
-   ```bash
-   # Using systemd, Docker, or your preferred method
-   python main.py
-   ```
-
-3. **Scale with Cloud Run** (Optional)
-   ```bash
-   gcloud run deploy incident-response-bot \
-     --source . \
-     --region us-central1
-   ```
 
 ---
 
@@ -779,14 +658,6 @@ This is a capstone project for educational purposes, but feedback is welcome!
 
 ---
 
-## 📜 License
-
-MIT License - Free to use for learning and portfolio purposes.
-
-See [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙏 Acknowledgments
 
 - **Google AI Agents Intensive Course** - For the knowledge and inspiration
@@ -799,27 +670,12 @@ See [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
-**Author**: [Your Name]
-**GitHub**: [Your GitHub URL]
-**LinkedIn**: [Your LinkedIn]
-**Email**: [Your Email]
+**Author**: Divyansh Joshi
+**GitHub**: https://github.com/DE-TOX/AiAgent-Incident-response-bot/tree/main
+**LinkedIn**: 
+**Email**: djknight0140@gmail.com
 
-**Demo Video**: [YouTube Link] _(Coming soon)_
-**Kaggle Submission**: [Kaggle Link] _(Submitted on [Date])_
 
----
-
-## 📈 Project Status
-
-**✅ Complete - Ready for Submission!**
-
-- [x] 5 AI agents implemented
-- [x] Vector embeddings & knowledge base
-- [x] Email notifications
-- [x] Interactive demos
-- [x] Comprehensive documentation
-- [ ] Demo video (in progress)
-- [ ] Submit to Kaggle by Dec 1, 2025
 
 ---
 
@@ -827,25 +683,10 @@ See [LICENSE](LICENSE) file for details.
 
 1. **5 AI Agents** - Most submissions have 2-3, we have 5 specialized agents
 2. **Vector Embeddings** - Advanced ML feature (768-dim semantic search)
-3. **Learning System** - Gets smarter with every incident (rare in demos)
+3. **Learning System** - Gets smarter with every incident 
 4. **Real Impact** - Solves actual SRE pain point, production-ready
 5. **Comprehensive** - Docs, demos, tests, and presentation-ready
 6. **Interactive** - Live demo where you can type incidents and see AI learn
-
----
-
-## 💪 Quick Start Checklist
-
-- [ ] Get Gemini API key from https://aistudio.google.com/app/apikey
-- [ ] Clone repository
-- [ ] Create virtual environment (`python -m venv venv`)
-- [ ] Install dependencies (`pip install -r requirements.txt`)
-- [ ] Configure `.env` file with API key
-- [ ] Run interactive demo (`./venv/bin/python demo_interactive.py`)
-- [ ] Create 3 incidents and watch it learn!
-- [ ] Practice your 2-minute pitch
-- [ ] Record demo video
-- [ ] Submit to Kaggle! 🎉
 
 ---
 
@@ -856,4 +697,3 @@ See [LICENSE](LICENSE) file for details.
 ---
 
 _Last Updated: November 2024_
-_Version: 1.0.0 - Production Ready_
