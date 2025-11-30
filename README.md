@@ -6,7 +6,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Built for**: [Kaggle's AI Agents Intensive](https://www.kaggle.com/) - Enterprise Track
+**Built for**: [Kaggle's AI Agents Intensive](https://www.kaggle.com/competitions/agents-intensive-capstone-project) - Enterprise Track
 5 AI Agents | Vector Embeddings | Knowledge Base
 
 ---
@@ -42,7 +42,7 @@ An AI-powered multi-agent system that:
 
 ### Demo Video
 
-> [📹 Watch 2-minute demo](https://youtu.be/your-demo-link) 
+> [📹 Watch 2-minute demo](https://youtu.be/6HGv4EdWnE0) 
 
 ### Try It Yourself
 
