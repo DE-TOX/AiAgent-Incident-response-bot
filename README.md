@@ -499,7 +499,7 @@ incident-response-bot/
 │   └── examples/                  # Sample incidents
 │
 ├── docs/                           # Documentation
-│   ├── AGENT-ARCHITECTURE.md       # Architecture guide
+│   └── AGENT-ARCHITECTURE.md       # Architecture guide
 │
 ├── demo_interactive.py             # Interactive demo (best!)
 ├── demo_full_lifecycle.py          # Complete workflow demo
@@ -514,7 +514,7 @@ incident-response-bot/
 
 ## 🎓 Course Features Demonstrated
 
-This project implements **6 advanced features** from the AI Agents Intensive course:
+This project implements **advanced features** from the AI Agents Intensive course:
 
 ### ✅ 1. Function Calling & Structured Output
 
@@ -557,8 +557,6 @@ This project implements **6 advanced features** from the AI Agents Intensive cou
 - Concurrent agent operations
 - Efficient resource usage
 
-**Required**: 4 features minimum
-**Implemented**: 6 features! 🎉
 
 ---
 
@@ -670,10 +668,10 @@ This is a capstone project for educational purposes, but feedback is welcome!
 
 ## 📞 Contact
 
-**Author**: Divyansh Joshi
-**GitHub**: https://github.com/DE-TOX/AiAgent-Incident-response-bot/tree/main
-**LinkedIn**: 
-**Email**: djknight0140@gmail.com
+- **Author**: Divyansh Joshi
+- **GitHub**: https://github.com/DE-TOX/AiAgent-Incident-response-bot/tree/main
+- **LinkedIn**: https://www.linkedin.com/in/divyansh-joshi-053691222/
+- **Email**: djknight0140@gmail.com
 
 
 
