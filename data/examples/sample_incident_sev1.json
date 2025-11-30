@@ -1,0 +1,71 @@
+{
+  "incident_id": "INC-20241115-003",
+  "title": "Payment processor service completely down",
+  "description": "Payment processor service health checks failing. All payment transactions failing. Customer-facing impact: Users cannot complete purchases.",
+  "severity": "SEV1",
+  "status": "resolved",
+  "affected_services": ["payment-processor", "checkout-service", "billing-service"],
+  "error_messages": [
+    "Service unavailable: payment-processor",
+    "Connection refused on port 8080",
+    "Health check failed: /health endpoint timeout"
+  ],
+  "timeline": [
+    {
+      "timestamp": "2024-11-15T09:12:00Z",
+      "event": "Alert triggered: Payment processor health check failing",
+      "actor": "monitoring-system"
+    },
+    {
+      "timestamp": "2024-11-15T09:13:00Z",
+      "event": "Incident created, SEV1 assigned - all hands on deck",
+      "actor": "IncidentResponseBot"
+    },
+    {
+      "timestamp": "2024-11-15T09:15:00Z",
+      "event": "War room created, incident commander assigned",
+      "actor": "on-call-sre"
+    },
+    {
+      "timestamp": "2024-11-15T09:20:00Z",
+      "event": "Investigation: Recent deployment v2.4.1 found in production",
+      "actor": "sre-team"
+    },
+    {
+      "timestamp": "2024-11-15T09:25:00Z",
+      "event": "Decision: Rollback to previous version v2.4.0",
+      "actor": "incident-commander"
+    },
+    {
+      "timestamp": "2024-11-15T09:30:00Z",
+      "event": "Rollback initiated",
+      "actor": "deployment-pipeline"
+    },
+    {
+      "timestamp": "2024-11-15T09:37:00Z",
+      "event": "Service restored, health checks passing",
+      "actor": "monitoring-system"
+    },
+    {
+      "timestamp": "2024-11-15T09:45:00Z",
+      "event": "Monitoring for stability, payments processing normally",
+      "actor": "sre-team"
+    },
+    {
+      "timestamp": "2024-11-15T10:00:00Z",
+      "event": "Incident resolved, postmortem scheduled",
+      "actor": "incident-commander"
+    }
+  ],
+  "created_at": "2024-11-15T09:13:00Z",
+  "updated_at": "2024-11-15T10:00:00Z",
+  "resolved_at": "2024-11-15T10:00:00Z",
+  "metadata": {
+    "duration_minutes": 48,
+    "customers_impacted": 2340,
+    "revenue_impact_usd": 45000,
+    "root_cause": "Memory leak in v2.4.1 deployment causing OOM crashes",
+    "resolution": "Rollback to v2.4.0, v2.4.1 deployment blocked",
+    "postmortem_url": "https://postmortems.example.com/INC-20241115-003"
+  }
+}

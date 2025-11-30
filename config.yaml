@@ -1,0 +1,72 @@
+# Incident Response Bot Configuration
+
+# Agent Settings
+agents:
+  orchestrator:
+    model: "gemini-2.5-flash"
+    temperature: 0.3
+    max_tokens: 8192
+
+  triage:
+    model: "gemini-2.5-flash"
+    temperature: 0.2
+
+  report_generator:
+    model: "gemini-2.5-flash"
+    temperature: 0.4
+
+  postmortem_writer:
+    model: "gemini-2.5-flash"
+    temperature: 0.5
+
+  action_tracker:
+    model: "gemini-2.5-flash"
+    temperature: 0.2
+
+  knowledge_retrieval:
+    model: "gemini-2.5-flash"
+    temperature: 0.1
+    embedding_model: "models/text-embedding-004"
+
+# Incident Severity Levels
+severity:
+  levels:
+    - SEV1 # Critical - System down
+    - SEV2 # High - Major functionality impacted
+    - SEV3 # Medium - Minor functionality impacted
+    - SEV4 # Low - Cosmetic or minimal impact
+
+# Session Management
+session:
+  timeout_minutes: 120
+  save_interval_seconds: 60
+  max_active_incidents: 10
+
+# Memory Configuration
+memory:
+  enabled: true
+  max_history_items: 100
+  similarity_threshold: 0.75
+
+# Observability
+logging:
+  level: INFO
+  format: json
+
+tracing:
+  enabled: true
+
+# Tools Configuration
+tools:
+  slack:
+    enabled: true
+    mock_mode: true
+
+  jira:
+    enabled: true
+    mock_mode: true
+    project_key: "INC"
+
+  monitoring:
+    enabled: true
+    mock_mode: true
